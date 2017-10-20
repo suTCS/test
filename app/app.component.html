@@ -1,6 +1,33 @@
-<h1>Todo App</h1>
-<hr>
-<app-todo-input></app-todo-input>
-<div *ngFor = "let todo of todoService.getTodos()">
-  <app-todo-item [todo]= "todo"></app-todo-item>
-</div>
+
+{{title}}
+<br>
+<button (click)="onClickMe()"> Click me!</button> <br>
+{{clickMessage}} <hr>
+
+<input (keyup) = "onKey($event)">
+<p>{{values}}</p> <hr>
+
+<input #box (keyup) = "onKeyyy(box.value)">
+<p>{{valuesss}}</p> <hr>
+
+<input #box1 (keyup.0)="onEnter(box1.value)">
+<p> {{value1}}</p> <br>
+
+<input #box2 (keyup.enter) = "update(box2.value)" 
+(blur)="update(box2.value)">
+<p>{{value2}}</p><br>
+
+<input #newHero (keyup.enter)="addHero(newHero.value)"
+(blur)="addHero(newHero.value); newHero.value='' "> <!--newHero.value='' is clear the input box after enter or add button clicked -->
+<button (click)="addHero(newHero.value)">Add</button>
+<ul> 
+    <li *ngFor ="let hero of heros"> {{hero}}</li>
+</ul> <hr>
+
+
+
+<rio-hello name = "Worldd"></rio-hello>
+<rio-hello [name]="name"></rio-hello>
+
+
+<!--<app-root></app-root>  -->                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
