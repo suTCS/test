@@ -1,0 +1,6 @@
+<h1>Todo App</h1>
+<hr>
+<app-todo-input></app-todo-input>
+<div *ngFor = "let todo of todoService.getTodos()">
+  <app-todo-item [todo]= "todo"></app-todo-item>
+</div>
