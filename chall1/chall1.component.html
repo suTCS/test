@@ -1,0 +1,12 @@
+<input #newTodo (keyup.enter)="addTodo(newTodo.value)"
+(blur)="addTodo(newTodo.value); newTodo.value='' ">
+<button (click) = "addTodo(newTodo.value)"> Add </button>
+
+<ul>
+  <li *ngFor="let todo of todos; let i = index">  {{todo}} 
+    <button   (click)="removeClick(i)">remove</button></li>
+ 
+</ul>
+
+ 
+
