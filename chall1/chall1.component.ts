@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {DataService} from '../../services/data.service';
 
 @Component({
   selector: 'app-chall1',
@@ -7,25 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Chall1Component implements OnInit{
   todos : any[];
-  name = 'name';
-  //todo=['a','b','c'];
+  
 
-  constructor() { 
+  constructor(private dataservice : DataService) { 
     
   }
 
   ngOnInit() {
-    this.todos=['a','b','c', 1];
+   // this.todos=['a','b','c', 1];
+   this.todos = this.dataservice.todos;
   }
   
-  addTodo(newTodo: string ) {
-    
+  addTodo(newTodo: string ) {  
     if(newTodo) {
       this.todos.push(newTodo);
     }
   }  
 
-  removeClick(i: any) {
+  removeTodo(i: number) {
     this.todos.splice(i, 1);
   }
 
