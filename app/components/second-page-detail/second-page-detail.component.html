@@ -1,0 +1,11 @@
+<div *ngIf = "hero">
+  <h2> {{hero.name}} details!</h2>
+  <div>
+      id: {{hero.id}} <br>
+      Below input box is 2 way binding
+  </div>
+  <div>
+      <label> name:  <input [(ngModel)]="hero.name" />
+      </label> <!--label makes bold -->
+  </div>
+</div>

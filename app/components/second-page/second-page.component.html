@@ -1,0 +1,11 @@
+<h1>{{title}}</h1>
+<h2> My Heroes</h2>
+<h3> Please click one of below </h3>
+<ul > <!-- [class.selected] -->
+    <li *ngFor = "let hero of heroes" 
+    hero.selected = "hero === selectedHero"   
+    (click) = "onselect(hero)"> 
+    {{hero.id}}  {{hero.name}}</li>
+</ul>
+<h2> This is a child compoenet : without touching the parent because of 2 way binding</h2>
+ <app-second-page-detail [hero]="selectedHero"></app-second-page-detail>

@@ -1,0 +1,12 @@
+<div>
+<h1>   This is parent. </h1>
+
+{{page}}
+</div>
+<hr>
+<div>
+  <!--pageChanged is from child method, showPage($event) is from parent method -->
+  <app-second-page-2-child (pageChanged)="showPage($event)"></app-second-page-2-child>
+  
+
+</div>

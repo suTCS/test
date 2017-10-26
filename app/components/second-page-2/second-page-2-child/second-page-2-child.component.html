@@ -1,0 +1,9 @@
+<h1>
+  This is child
+</h1>
+
+<ul class="pagination"> <!--pagination is bootstrap pagination -->
+  <li *ngFor="let page of pages" class="page-item" (click)="clickPage(page)">
+      <a class="page-link" href="#"> {{page}} </a>
+  </li>
+</ul>
