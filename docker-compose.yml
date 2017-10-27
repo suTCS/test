@@ -1,0 +1,33 @@
+version: "2"
+services:
+        nginx:
+                image: "nginx:latest"
+                ports:
+                        - "8080:80"
+                links:
+                        - node8
+                networks:
+                        - default
+                        - internal
+
+        node8:
+                image: "node:8"
+                expose:
+                        - "8080"
+                command: "npm start"
+                environment:
+                        - NODE_ENV=production
+                working_dir: /home/su/suangu
+                volumes:
+                        - /home/su/suangu:/home/su/suangu
+                networks:
+                        - default
+                        - internal
+ 
+networks:
+        internal:
+                driver: bridge
+                
+                
+
+
