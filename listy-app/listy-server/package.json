@@ -1,0 +1,20 @@
+{
+  "name": "sample-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Dan Shick",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "test": "mocha",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.2",
+    "jsonwebtoken": "^8.1.0",
+    "mocha": "^4.0.1",
+    "sodium": "^2.0.1"
+  }
+}

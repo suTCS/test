@@ -1,0 +1,11 @@
+version: '2'
+services:
+  listy-server:
+    build: listy-server
+    ports:
+      - "4000:4000"
+  
+  listy-client:
+    build: listy-client
+    ports:
+      - "3000:3000"
